@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class NewMessage extends StatefulWidget {
@@ -42,7 +41,7 @@ class _NewMessageState extends State<NewMessage> {
       'createdAt': Timestamp.now(),
       'userId': user.uid,
       'username': userData.data()!['username'],
-      'userimage': userData.data()!['image_url']
+      'userImage': userData.data()!['image_url']
     });
   }
 
@@ -58,7 +57,7 @@ class _NewMessageState extends State<NewMessage> {
               textCapitalization: TextCapitalization.sentences,
               autocorrect: true,
               enableSuggestions: true,
-              decoration: InputDecoration(labelText: 'Send a message...'),
+              decoration: const InputDecoration(labelText: 'Send a message...'),
             ),
           ),
           IconButton(

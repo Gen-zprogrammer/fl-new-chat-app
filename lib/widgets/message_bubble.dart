@@ -27,7 +27,7 @@ class MessageBubble extends StatelessWidget {
   // the shape of the bubble for messages thereafter.
   final bool isFirstInSequence;
 
-  // Image of the user to be displayed next to the bubble.
+  // Image of the user to be displayed next to the bubble  .
   // Not required if the message is not the first in a sequence.
   final String? userImage;
 

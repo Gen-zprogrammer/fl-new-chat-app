@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:new_chat_app/widgets/chat_message.dart';
 import 'package:new_chat_app/widgets/new_message.dart';
 
@@ -32,15 +33,22 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('FlutterChat'),
+          title: Text(
+            'Flutter Chat App',
+            style: GoogleFonts.lato(
+              fontWeight: FontWeight.bold,
+              color: Colors.white70,
+            ),
+          ),
+          backgroundColor: const Color.fromARGB(255, 63, 17, 177),
           actions: [
             IconButton(
               onPressed: () {
                 FirebaseAuth.instance.signOut();
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.exit_to_app,
-                color: Theme.of(context).colorScheme.primary,
+                color: Colors.white70,
               ),
             )
           ],
